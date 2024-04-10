@@ -1,7 +1,8 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import MobileNav from './MobileNav'
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import MobileNav from "./MobileNav";
+import { SignInButton, UserButton } from "@clerk/nextjs";
 const Navbar = () => {
   return (
     <nav className="flex-between fixed z-50 w-full bg-dark-1 px-6 py-4 lg:px-10">
@@ -18,10 +19,13 @@ const Navbar = () => {
         </p>
       </Link>
       <div className="flex-between gap-5">
+        <SignInButton>
+          <UserButton />
+        </SignInButton>
         <MobileNav />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
