@@ -14,6 +14,7 @@ const MeetingTypeList = () => {
   const [meetingState, setMeetingState] = useState<
     "isScheduleMeeting" | "isJoiningMeeting" | "isInstantMeeting" | undefined
   >(undefined);
+  
   const [values, setValues] = useState({
     dateTime: new Date(),
     description: "",
